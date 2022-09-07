@@ -1,15 +1,18 @@
 ﻿using System.Collections.Generic;
+using SDK.Cards;
 
-namespace SDK
+namespace SDK.Players
 {
-    public class Player
+    public abstract class Player
     {
         private string name;
-        private List<Card> cards = new List<Card>();
+        protected List<Card> Cards = new List<Card>();
 
         public Player(string name)
         {
             this.name = name;
         }
+
+        public abstract 
     }
 }
