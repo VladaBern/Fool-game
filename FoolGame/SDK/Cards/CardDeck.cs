@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SDK
+namespace SDK.Cards
 {
     public class CardDeck
     {

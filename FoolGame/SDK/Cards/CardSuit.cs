@@ -1,4 +1,4 @@
-﻿namespace SDK
+﻿namespace SDK.Cards
 {
     public enum CardSuit
     {
