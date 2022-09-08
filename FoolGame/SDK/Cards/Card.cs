@@ -25,8 +25,27 @@
             {
                 return true;
             }
-            
+
             return false;
+        }
+
+        public int Compare(Card card, CardSuit trump)
+        {
+            if ((this.Suit != trump && card.Suit != trump) || (this.Suit == trump && card.Suit == trump))
+            {
+                if (this.Value < card.Value)
+                    return -1;
+                if (this.Value > card.Value)
+                    return 1;
+                if (this.Value == card.Value)
+                    return 0;
+            }
+            if (this.Suit == trump && card.Suit != trump)
+            {
+                return 1;
+            }
+
+            return -1;
         }
     }
 }
