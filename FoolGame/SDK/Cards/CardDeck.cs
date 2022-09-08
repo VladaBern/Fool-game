@@ -39,16 +39,23 @@ namespace SDK.Cards
             }
         }
 
-        public Card GetCard()
+        public List<Card> GetCard(int count)
         {
-            if (cardDeck.Count != 0)
+            List<Card> result = new List<Card>();
+
+            for (int i = 0; i < count; i++)
             {
-                return cardDeck.Pop();
+                if (cardDeck.Count != 0)
+                {                    
+                    result.Add(cardDeck.Pop());
+                }
+                else
+                {
+                    throw new DeckEmptyException("Deck is empty");
+                }
             }
-            else
-            {
-                throw new DeckEmptyException("Deck is empty");
-            }
+
+            return result;
         }
                 
         public CardSuit TrumpChoice
